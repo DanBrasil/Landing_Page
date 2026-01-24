@@ -1,14 +1,21 @@
+import Comments from "@/components/comments";
+import Contact from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
+import Sessões from "@/components/Sessão";
 import Sobre from "@/components/Sobre";
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="relative min-h-screen bg-[url('/fundo_psicologo.jpg')] bg-cover bg-top">
-      <div className="absolute inset-0 bg-white/70"></div>
-      <div className="relative z-10">
-        <Header />
-        <Sobre />
-      </div>
+    <main className="min-h-screen">
+      <Header />
+      <Sobre />
+      <Sessões />
+      <Comments />
+      <Contact />
+      <Footer />
     </main>
   );
-}
+};
+
+export default Home;

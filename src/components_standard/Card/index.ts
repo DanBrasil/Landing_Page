@@ -1,2 +1,2 @@
-export { default as Card } from "./Card";
+export { Card, CardHeader } from "./Card";
 export type { CardProps } from "./Card";
