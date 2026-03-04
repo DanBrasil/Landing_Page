@@ -14,10 +14,10 @@ export const buttonStyles = cva(
     variants: {
       variant: {
         solid: [
-          "bg-blue-600 text-white",
-          "hover:bg-blue-800",
-          "active:bg-blue-800",
-          "focus-visible:ring-8 focus-visible:ring-blue-300",
+          "bg-stone-600 text-white",
+          "hover:bg-stone-800",
+          "active:bg-stone-800",
+          "focus-visible:ring-8 focus-visible:ring-stone-300",
           "disabled:bg-black disabled:border disabled:border-white",
         ],
         outline: [

@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/components_standard/button";
 import { Card, CardHeader } from "@/components_standard/Card";
 import {
@@ -9,7 +11,7 @@ import Input from "@/components_standard/input";
 import { Label } from "@/components_standard/Label";
 import { TextArea } from "@/components_standard/TextArea";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
-
+import { useState } from "react";
 
 const contactInfo = [
   {
@@ -35,6 +37,31 @@ const contactInfo = [
 ];
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (response.ok) {
+      alert("Mensagem enviada com sucesso!");
+      setForm({ name: "", email: "", phone: "", message: "" });
+    } else {
+      alert("Erro ao enviar mensagem");
+    }
+  };
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,10 +85,17 @@ const Contact = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="space-y-2">
                     <Label htmlFor="name">Nome Completo</Label>
-                    <Input id="name" placeholder="Seu nome" />
+                    <Input
+                      id="name"
+                      placeholder="Seu nome"
+                      value={form.name}
+                      onChange={(e) =>
+                        setForm({ ...form, name: e.target.value })
+                      }
+                    />
                   </div>
 
                   <div className="space-y-2">
@@ -70,6 +104,10 @@ const Contact = () => {
                       id="email"
                       type="email"
                       placeholder="seu@email.com"
+                      value={form.email}
+                      onChange={(e) =>
+                        setForm({ ...form, email: e.target.value })
+                      }
                     />
                   </div>
 
@@ -79,19 +117,37 @@ const Contact = () => {
                       id="phone"
                       type="tel"
                       placeholder="(11) 98765-4321"
+                      value={form.phone}
+                      onChange={(e) =>
+                        setForm({ ...form, phone: e.target.value })
+                      }
                     />
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Mensagem</Label>
+                  <div className="flex items-start gap-4">
+                    <Label
+                      htmlFor="message"
+                      className="min-w-[120px] pt-2 text-sm font-medium"
+                    >
+                      Mensagem
+                    </Label>
+
                     <TextArea
                       id="message"
                       placeholder="Como posso ajudar você?"
                       rows={5}
+                      value={form.message}
+                      onChange={(e) =>
+                        setForm({ ...form, message: e.target.value })
+                      }
+                      className="flex-1 min-h-[150px] rounded-md border px-3 py-2 resize-y border-stone-300 focus:outline-none focus:ring-2 focus:ring-stone-300 "
                     />
                   </div>
 
-                  <Button className="w-full bg-teal-600 hover:bg-teal-700">
+                  <Button
+                    type="submit"
+                    className="w-full bg-teal-600 hover:bg-teal-700"
+                  >
                     Enviar Mensagem
                   </Button>
                 </form>

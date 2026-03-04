@@ -29,7 +29,7 @@ export const CardTitle = ({ children }: CardProps) => {
 };
 
 export const CardDescription = ({ children }: CardProps) => {
-  return <div className="text-slate-600">{children}</div>;
+  return <div className="text-slate-500">{children}</div>;
 };
 
 export const CardContent = ({ children }: CardProps) => {
