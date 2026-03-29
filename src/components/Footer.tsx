@@ -6,8 +6,8 @@ export const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-stone text-lg mb-4 flex items-center gap-2">
-              <Heart className="h-5 w-5 text-teal-500" />
+            <h3 className="text-white text-lg mb-4 flex items-center gap-2">
+              <Heart className="h-5 w-5 text-red-500" />
               Psicologia Clínica
             </h3>
             <p className="text-slate-400">
@@ -22,7 +22,7 @@ export const Footer = () => {
               <li>
                 <a
                   href="#servicos"
-                  className="hover:text-teal-400 transition-colors"
+                  className="hover:text-teal-400 transition-colors e"
                 >
                   Serviços
                 </a>
@@ -43,14 +43,6 @@ export const Footer = () => {
                   Depoimentos
                 </a>
               </li>
-              <li>
-                <a
-                  href="#contato"
-                  className="hover:text-teal-400 transition-colors"
-                >
-                  Contato
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -58,7 +50,7 @@ export const Footer = () => {
             <h3 className="text-white text-lg mb-4">Informações</h3>
             <ul className="space-y-2 text-slate-400">
               <li>CRP 06/XXXXX</li>
-              <li>Atendimento presencial e online</li>
+              <li>Atendimento online</li>
               <li>Sigilo profissional garantido</li>
             </ul>
           </div>

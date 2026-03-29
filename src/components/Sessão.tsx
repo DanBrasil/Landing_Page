@@ -1,15 +1,15 @@
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { Sections } from "./contsComponents";
 
 const Sessões = () => {
   const qualifications = [
     "CRP 06/XXXXX - Conselho Regional de Psicologia",
-    "Especialização em Terapia Cognitivo-Comportamental",
     "Formação em Psicologia Clínica",
-    "Mais de 10 anos de experiência",
+    "Mais de 2 anos de experiência",
   ];
   return (
-    <section className="py-20 bg-white">
+    <section id={Sections.SOBRE} className="py-20 bg-white">
       <div className="flex flex-row justify-between items-center w-full p-16">
         <div className="flex flex-col w-screen max-w-2xl order-2 lg:order-1">
           <h2 className="text-3xl sm:text-4xl mb-6 text-slate-900">
@@ -29,8 +29,8 @@ const Sessões = () => {
           <div className="space-y-3">
             {qualifications.map((qual, index) => (
               <div key={index} className="flex items-start gap-3">
-                <CheckCircle2 className="h-6 w-6 text-teal-600 flex-shrink-0 mt-0.5" />
-                <span className="text-slate-700">{qual}</span>
+                <CheckCircle2 className="h-6 w-6 text-stone-600 flex-shrink-0 mt-0.5" />
+                <span className="text-stone-700">{qual}</span>
               </div>
             ))}
           </div>

@@ -10,25 +10,21 @@ import {
 import Input from "@/components_standard/input";
 import { Label } from "@/components_standard/Label";
 import { TextArea } from "@/components_standard/TextArea";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, Clock } from "lucide-react";
 import { useState } from "react";
 
 const contactInfo = [
   {
     icon: Phone,
     title: "Telefone",
-    content: "(11) 98765-4321",
+    content: "(11) 96587-1150",
   },
   {
     icon: Mail,
     title: "Email",
-    content: "contato@psicologo.com",
+    content: "nathalybruza@hotmail.com",
   },
-  {
-    icon: MapPin,
-    title: "Endereço",
-    content: "Rua das Flores, 123, São Paulo, SP",
-  },
+
   {
     icon: Clock,
     title: "Horário de Atendimento",
@@ -160,9 +156,9 @@ const Contact = () => {
               return (
                 <Card key={index}>
                   <CardContent>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <info.icon className="w-6 h-6 text-teal-600" />
+                    <div className="flex items-start gap-4 p-1">
+                      <div className="w-12 h-12 bg-stone-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-6 h-6 text-stone-600" />
                       </div>
                       <div>
                         <h3 className="mb-1 text-slate-900">{info.title}</h3>
@@ -174,10 +170,12 @@ const Contact = () => {
               );
             })}
 
-            <div className="bg-teal-50 rounded-lg p-6 border border-teal-200">
-              <h3 className="text-lg mb-2 text-teal-900">Atendimento Online</h3>
-              <p className="text-teal-700">
-                Também ofereço sessões por videochamada para sua comodidade e
+            <div className="bg-stone-50 rounded-lg p-6 border border-stone-200">
+              <h3 className="text-lg mb-2 text-stone-900">
+                Atendimento Online
+              </h3>
+              <p className="text-stone-700">
+                Sessões realizadas por videochamada para sua comodidade e
                 segurança.
               </p>
             </div>

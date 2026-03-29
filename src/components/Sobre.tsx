@@ -1,9 +1,13 @@
 import { Card } from "@/components_standard/Card";
 import { Brain, Users, Heart, MessageCircle } from "lucide-react";
+import { Sections } from "./contsComponents";
 
 const Sobre = () => {
   return (
-    <section className="flex flex-col w-full h-full py-20 px-4 mx-auto text-center bg-stone-200">
+    <section
+      id={Sections.SERVICOS}
+      className="flex flex-col w-full h-full py-20 px-4 mx-auto text-center bg-stone-200"
+    >
       <div className="flex flex-col">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl mb-4 text-stone-900">
