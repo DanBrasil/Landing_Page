@@ -144,6 +144,7 @@ const Contact = () => {
                     </Label>
                     <Input
                       id="name"
+                      noLabel={true}
                       placeholder="Digite seu nome completo"
                       value={form.name}
                       onChange={(e) => {
@@ -172,6 +173,7 @@ const Contact = () => {
                     </Label>
                     <Input
                       id="email"
+                      noLabel={true}
                       type="email"
                       placeholder="seu.email@exemplo.com"
                       value={form.email}
@@ -204,6 +206,7 @@ const Contact = () => {
                     </Label>
                     <Input
                       id="phone"
+                      noLabel={true}
                       type="tel"
                       placeholder="(11) 98765-4321"
                       value={form.phone}

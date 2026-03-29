@@ -23,6 +23,7 @@ const Input = ({
   onClickLeft,
   onClickRight,
   isPassword = false,
+  className,
   ...rest
 }: IInputProps) => {
   const hasError = Boolean($error);
@@ -44,11 +45,12 @@ const Input = ({
       : "password"
     : (rest.type ?? "text");
 
+  const currentValue = String(value ?? defaultValue ?? "");
+  const hasValue = currentValue.length > 0;
+
   return (
-    <div
-      className={wrapperInputStyles()}
-    >
-      {!!String(value ?? defaultValue ?? "").trim() && !noLabel && (
+    <div className={wrapperInputStyles()}>
+      {hasValue && !noLabel && (
         <div className={labelStyles({ hasError })}>
           {placeholder}
           {rest.required && (
@@ -58,15 +60,20 @@ const Input = ({
       )}
 
       <input
-        className={inputStyles({
-          hasError,
-          isLeft: !!leftIcon,
-          isRight: !!rightIcon || isPassword,
-        })}
         {...rest}
+        className={
+          className ||
+          inputStyles({
+            hasError,
+            isLeft: !!leftIcon,
+            isRight: !!rightIcon || isPassword,
+          })
+        }
         type={inputType}
         value={value}
-        placeholder={rest.required ? `${placeholder} *` : placeholder}
+        placeholder={
+          hasValue ? "" : rest.required ? `${placeholder} *` : placeholder
+        }
         autoComplete={rest.autoComplete ?? autoCompleteValue}
         ref={inputRef}
         onKeyDown={(e) => {
