@@ -153,7 +153,7 @@ const Contact = () => {
                         }
                       }}
                       className={`w-full h-11 sm:h-12 px-4 text-sm sm:text-base rounded-lg border-2 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
-                        errors.name ? "border-red-500" : "border-stone-300"
+                        errors.name ? "border-red-300" : "border-stone-300"
                       }`}
                     />
                     {errors.name && (
@@ -182,7 +182,7 @@ const Contact = () => {
                         }
                       }}
                       className={`w-full h-11 sm:h-12 px-4 text-sm sm:text-base rounded-lg border-2 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
-                        errors.email ? "border-red-500" : "border-stone-300"
+                        errors.email ? "border-red-300" : "border-stone-300"
                       }`}
                     />
                     {errors.email && (
@@ -235,7 +235,7 @@ const Contact = () => {
                           }
                         }}
                         className={`w-full min-h-[130px] sm:min-h-[160px] rounded-lg border-2 px-4 py-3 text-sm sm:text-base resize-y focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 transition-all ${
-                          errors.message ? "border-red-500" : "border-stone-300"
+                          errors.message ? "border-red-300" : "border-stone-300"
                         }`}
                       />
                       {errors.message && (

@@ -1,5 +1,5 @@
 "use client";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState, useId } from "react";
 import type { IInputProps } from "./input.interface";
 import { Eye, EyeOff } from "lucide-react";
 
@@ -11,7 +11,6 @@ import {
   iconWrapperStyles,
   requiredAsteriskStyles,
 } from "./input.styles";
-import { preventAutoComplete } from "./utils";
 
 const Input = ({
   placeholder,
@@ -28,6 +27,7 @@ const Input = ({
 }: IInputProps) => {
   const hasError = Boolean($error);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const uniqueId = useId();
 
   useLayoutEffect(() => {
     const el = inputRef.current;
@@ -36,7 +36,7 @@ const Input = ({
     }
   }, [value]);
 
-  const newHash = preventAutoComplete(`${Date.now()}&${placeholder}`);
+  const autoCompleteValue = rest.autoComplete ?? `field-${uniqueId}`;
   const [showPassword, setShowPassword] = useState(false);
   const inputType = isPassword
     ? showPassword
@@ -67,7 +67,7 @@ const Input = ({
         type={inputType}
         value={value}
         placeholder={rest.required ? `${placeholder} *` : placeholder}
-        autoComplete={rest.autoComplete ?? newHash}
+        autoComplete={rest.autoComplete ?? autoCompleteValue}
         ref={inputRef}
         onKeyDown={(e) => {
           if (e.key === "Enter" && rest.onKeyDown) {
