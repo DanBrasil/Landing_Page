@@ -45,14 +45,8 @@ const Input = ({
     : (rest.type ?? "text");
 
   return (
-    <form
+    <div
       className={wrapperInputStyles()}
-      autoComplete="off"
-      noValidate
-      onSubmit={(e) => e.preventDefault()}
-      onKeyDown={(e) => {
-        if (e.key === "Enter") e.preventDefault();
-      }}
     >
       {!!String(value ?? defaultValue ?? "").trim() && !noLabel && (
         <div className={labelStyles({ hasError })}>
@@ -75,6 +69,11 @@ const Input = ({
         placeholder={rest.required ? `${placeholder} *` : placeholder}
         autoComplete={rest.autoComplete ?? newHash}
         ref={inputRef}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" && rest.onKeyDown) {
+            rest.onKeyDown(e);
+          }
+        }}
       />
 
       {leftIcon && (
@@ -122,7 +121,7 @@ const Input = ({
         )
       )}
       {hasError && <span className={errorMessageStyles()}>{$error}</span>}
-    </form>
+    </div>
   );
 };
 
