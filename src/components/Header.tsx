@@ -2,8 +2,8 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="relative min-h-screen bg-[url('/fundo2.jpg')] bg-cover bg-center">
-      <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center md:items-start p-4 sm:p-6 md:p-12 lg:p-16 h-full gap-6 sm:gap-8">
+    <header className="relative min-h-screen bg-black bg-[url('/fundo2.jpg')] bg-cover bg-center before:content-[''] before:absolute before:inset-0 before:bg-black/50 before:z-0">
+      <div className="relative z-10 flex flex-col justify-center items-center md:items-start p-4 sm:p-6 md:p-12 lg:p-16 h-full min-h-screen gap-6 sm:gap-8">
         <div className="flex flex-col gap-4 sm:gap-6 text-center md:text-left max-w-4xl">
           <div className="flex flex-col items-center md:items-start justify-center md:justify-start gap-3 sm:gap-4">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-3 sm:mb-4 md:mb-6 font-bold leading-tight">

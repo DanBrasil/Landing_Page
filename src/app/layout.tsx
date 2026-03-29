@@ -96,6 +96,7 @@ export default function RootLayout({
     <html lang="pt-BR" className="h-full">
       <head>
         <JsonLd />
+        <link rel="preload" href="/fundo2.jpg" as="image" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
