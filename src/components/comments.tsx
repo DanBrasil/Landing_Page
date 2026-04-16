@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Sections } from "./contsComponents";
 
 const Comments = () => {
@@ -56,6 +57,21 @@ const Comments = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <p className="text-stone-700 text-lg mb-5 font-medium">
+            Você pode ser o próximo. Dê o primeiro passo hoje.
+          </p>
+          <a
+            href="https://wa.me/+5511965871150"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#25D366] px-6 py-3 rounded-md hover:bg-[#1ebe5d] transition-colors duration-300 text-base font-semibold text-white shadow-lg hover:shadow-xl"
+          >
+            <FaWhatsapp className="w-5 h-5 text-white" />
+            Agendar minha consulta
+          </a>
         </div>
       </div>
     </section>

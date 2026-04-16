@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
 import { Sections } from "./contsComponents";
 
 const Sessões = () => {
@@ -56,6 +57,18 @@ const Sessões = () => {
               />
             </div>
           </div>
+        </div>
+
+        <div className="mt-10 sm:mt-12 flex justify-center">
+          <a
+            href="https://wa.me/+5511965871150"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-row items-center bg-[#25D366] px-6 py-3 gap-2 rounded-md hover:bg-[#1ebe5d] transition-colors duration-300 text-base font-semibold text-white shadow-lg hover:shadow-xl"
+          >
+            <FaWhatsapp className="w-5 h-5 text-white" />
+            Agendar minha consulta
+          </a>
         </div>
       </div>
     </section>

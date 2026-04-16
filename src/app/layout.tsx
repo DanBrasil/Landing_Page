@@ -12,23 +12,36 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
+const CRP = "CRP 06/222189";
+
 export const metadata: Metadata = {
-  title: "Nathály Bruza - Psicóloga Clínica | Atendimento Online em São Paulo",
-  description:
-    "Psicóloga clínica Nathály Bruza (CRP 06/XXXXX). Atendimento psicológico online para ansiedade, depressão e estresse. Agende sua consulta: (11) 96587-1150",
+  title:
+    "Nathály Bruza | Psicóloga Online - Ansiedade, Maternidade e Bem-estar",
+  description: `Psicóloga clínica Nathály Bruza (${CRP}). Atendimento psicológico online para gestantes, mães e adultos. Ansiedade, depressão e pós-parto. Agende: (11) 96587-1150`,
+  robots: { index: true, follow: true },
   openGraph: {
-    title: "Nathály Bruza - Psicóloga Clínica",
+    title:
+      "Nathály Bruza | Psicóloga Online - Ansiedade, Maternidade e Bem-estar",
     description:
-      "Atendimento psicológico online personalizado. Acolhimento profissional para ansiedade, depressão e bem-estar emocional.",
+      "Atendimento psicológico online personalizado. Acolhimento profissional para ansiedade, depressão, gestação e bem-estar emocional.",
     type: "website",
     locale: "pt_BR",
     siteName: "Nathály Bruza - Psicologia Clínica",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Nathály Bruza - Psicóloga Clínica",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nathály Bruza - Psicóloga Clínica",
+    title: "Nathály Bruza | Psicóloga Online",
     description:
-      "Atendimento psicológico online. Agende sua consulta: (11) 96587-1150",
+      "Atendimento psicológico online para ansiedade, gestação e bem-estar. Agende: (11) 96587-1150",
   },
 };
 

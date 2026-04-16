@@ -21,10 +21,10 @@ const Header = () => {
             href="https://wa.me/+5511965871150"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-row items-center bg-stone-500 px-4 sm:px-6 py-2.5 sm:py-3 gap-2 rounded-md hover:bg-stone-600 transition-colors duration-300 text-sm sm:text-base font-medium shadow-lg hover:shadow-xl"
+            className="flex flex-row items-center bg-[#25D366] px-4 sm:px-6 py-2.5 sm:py-3 gap-2 rounded-md hover:bg-[#1ebe5d] transition-colors duration-300 text-sm sm:text-base font-semibold shadow-lg hover:shadow-xl"
           >
             <FaWhatsapp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-            Converse pelo WhatsApp
+            Agendar minha consulta
           </a>
         </div>
       </div>

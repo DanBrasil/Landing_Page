@@ -1,16 +1,30 @@
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#x27;");
+}
+
 export async function POST(req: Request) {
   try {
     const { name, email, phone, message } = await req.json();
-    console.log(process.env.EMAIL_USER);
+
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Campos obrigatórios não preenchidos" },
         { status: 400 },
       );
     }
+
+    const safeName = escapeHtml(String(name));
+    const safeEmail = escapeHtml(String(email));
+    const safePhone = escapeHtml(String(phone ?? ""));
+    const safeMessage = escapeHtml(String(message));
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -21,16 +35,17 @@ export async function POST(req: Request) {
     });
 
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
+      from: `"Contato Site" <${process.env.EMAIL_USER}>`,
+      replyTo: safeEmail,
       to: process.env.EMAIL_USER,
       subject: "Nova mensagem do site",
       html: `
         <h2>Novo contato</h2>
-        <p><strong>Nome:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Telefone:</strong> ${phone}</p>
+        <p><strong>Nome:</strong> ${safeName}</p>
+        <p><strong>Email:</strong> ${safeEmail}</p>
+        <p><strong>Telefone:</strong> ${safePhone}</p>
         <p><strong>Mensagem:</strong></p>
-        <p>${message}</p>
+        <p>${safeMessage}</p>
       `,
     });
 
