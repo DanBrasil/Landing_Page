@@ -1,11 +1,12 @@
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
+import { CRP } from "@/app/layout";
 import { Sections } from "./contsComponents";
 
 const Sessões = () => {
   const qualifications = [
-    "CRP 06/XXXXX - Conselho Regional de Psicologia",
+    `${CRP} - Conselho Regional de Psicologia`,
     "Formação em Psicologia Clínica",
     "Mais de 2 anos de experiência",
   ];

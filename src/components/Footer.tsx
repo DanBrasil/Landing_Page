@@ -1,4 +1,5 @@
 import { Heart } from "lucide-react";
+import { CRP } from "@/app/layout";
 
 export const Footer = () => {
   return (
@@ -53,7 +54,7 @@ export const Footer = () => {
               Informações
             </h3>
             <ul className="space-y-2 text-slate-400">
-              <li className="text-sm sm:text-base">CRP 06/XXXXX</li>
+              <li className="text-sm sm:text-base">{CRP}</li>
               <li className="text-sm sm:text-base">Atendimento online</li>
               <li className="text-sm sm:text-base">
                 Sigilo profissional garantido

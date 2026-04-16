@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 
-const CRP = "CRP 06/222189";
+export const CRP = "CRP 06/222189";
 
 export const metadata: Metadata = {
   title:
