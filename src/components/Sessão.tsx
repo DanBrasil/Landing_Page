@@ -1,7 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
-import { CRP } from "@/app/layout";
+import { CRP } from "@/constants/psicologa";
 import { Sections } from "./contsComponents";
 
 const Sessões = () => {

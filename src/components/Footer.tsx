@@ -1,5 +1,5 @@
 import { Heart } from "lucide-react";
-import { CRP } from "@/app/layout";
+import { CRP } from "@/constants/psicologa";
 
 export const Footer = () => {
   return (
