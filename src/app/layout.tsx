@@ -13,12 +13,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
   title:
     "Nathály Bruza | Psicóloga Online - Ansiedade, Maternidade e Bem-estar",
   description: `Psicóloga clínica Nathály Bruza (${CRP}). Atendimento psicológico online para gestantes, mães e adultos. Ansiedade, depressão e pós-parto. Agende: (11) 96587-1150`,
   robots: { index: true, follow: true },
+  verification: {
+    google: "ZPQEol73xNU5wG5n4xfBL754b0MIayUBDi322XgfMAU",
+  },
   openGraph: {
     title:
       "Nathály Bruza | Psicóloga Online - Ansiedade, Maternidade e Bem-estar",
