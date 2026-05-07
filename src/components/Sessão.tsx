@@ -17,15 +17,14 @@ const Sessões = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-12">
-          {/* Texto - ordem 2 em mobile, 1 em desktop */}
           <div className="flex flex-col w-full lg:max-w-2xl order-2 lg:order-1">
             <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6 text-slate-900 font-bold">
               Sobre a Profissional
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-slate-600 mb-4 sm:mb-6 leading-relaxed">
               Olá! Sou psicóloga clínica dedicada a ajudar pessoas a encontrarem
-              equilíbrio emocional e bem-estar. Minha abordagem é acolhedora,
-              empática e baseada em evidências científicas.
+              equilíbrio emocional e bem-estar. Um ambiente de escuta
+              acolhedora, empática e individualizada.
             </p>
             <p className="text-sm sm:text-base md:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
               Acredito que cada pessoa é única e merece um atendimento

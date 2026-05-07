@@ -10,8 +10,8 @@ const Header = () => {
               Cuidando da sua saúde mental com acolhimento e profissionalismo
             </h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-stone-300 font-light leading-relaxed">
-              Encontre equilíbrio emocional e bem-estar em um espaço seguro e
-              confidencial. Atendimento personalizado para suas necessidades.
+              Um espaço de escuta e construção de bem-estar. <br /> Atendimento
+              personalizado para suas necessidades.
             </h2>
           </div>
         </div>

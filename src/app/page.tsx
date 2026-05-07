@@ -1,4 +1,4 @@
-import Comments from "@/components/comments";
+import ComoFunciona from "@/components/ComoFunciona";
 import Contact from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import Header from "@/components/Header";
@@ -12,7 +12,7 @@ const Home = () => {
         <Header />
         <Sobre />
         <Sessões />
-        <Comments />
+        <ComoFunciona />
         <Contact />
       </main>
       <Footer />
